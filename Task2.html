@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      .background {
+        background-color: black;
+        padding: 260px 70px;
+        border-radius: 10px;
+        position: relative;
+      }
+      
+      .text {
+        color: white;
+        font-size: 60px;
+        text-align: center;
+        margin: 0;
+      }
+      
+      .circle {
+        position: absolute;
+        width: 80px;
+        height: 80px; /* Combined with width for shorthand */
+        top: 50%;
+        background-color: white;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        margin-left: 50px;
+        mix-blend-mode: difference;
+        animation: circleAnimation 8s linear infinite;
+      }
+  
+      @keyframes circleAnimation {
+        0%, 100% {
+          left: 0;
+        }
+        50% {
+          left: calc(100% - 180px);
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="background">
+            <p class="text">Welcome To ARPM</p>
+            <div class="circle"></div>
+        </div>
+    </div>
+</body>
+</html>
